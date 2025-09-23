@@ -19,6 +19,7 @@ public class CharacterSteps {
         logger.info("Requesting character with id {}", id);
         System.out.println("Requesting character with id " + id);
         character = apiClient.getCharacterById(id);
+        System.out.println("and the character is: "+  id);
     }
 
     @Then("the response should contain the name {string}")

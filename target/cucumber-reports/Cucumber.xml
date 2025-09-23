@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="1.229" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Rick and Morty API Website Navigation" name="Explore the About page" time="0.076">
+<system-out><![CDATA[
+Given I am on "https://rickandmortyapi.com/"................................passed
+When I click on the "About" link............................................passed
+Then I should be redirected to the about page...............................passed
+And I should see information about the technical stuff......................passed
+And I should see "Axel Fuhrmann" mentioned..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Rick and Morty API testing" name="Get character by ID" time="0.833">
+<system-out><![CDATA[
+Given I request character with id 1.........................................passed
+Then the response should contain the name "Rick Sanchez"....................passed
+]]></system-out>
+</testcase>
+</testsuite>
