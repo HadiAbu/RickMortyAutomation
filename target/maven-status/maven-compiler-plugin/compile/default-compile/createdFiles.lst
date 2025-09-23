@@ -1,0 +1,4 @@
+com\example\model\CharacterResponse.class
+com\example\model\CharacterDTO.class
+com\example\App.class
+com\example\util\ApiClient.class
