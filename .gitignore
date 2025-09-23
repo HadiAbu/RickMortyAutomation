@@ -8,6 +8,7 @@
 .alpackages/
 #Snapshots folder
 .snapshots/
+.allure/
 #Testing Output folder
 .output/
 #Extension App-file

@@ -14,31 +14,29 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <cucumber.version>7.15.0</cucumber.version>
-        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <cucumber.version>7.14.0</cucumber.version>
+        <junit.version>4.13.2</junit.version>
         <allure.version>2.24.0</allure.version>
         <slf4j.version>2.0.9</slf4j.version>
         <gson.version>2.10.1</gson.version>
     </properties>
 
     <dependencies>
-        <!-- ✅ Cucumber core -->
+        <!-- Cucumber Java -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>${cucumber.version}</version>
+            <version>7.14.0</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- ✅ JUnit 5 integration -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit-platform-engine</artifactId>
-            <version>${cucumber.version}</version>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.14.0</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- ✅ Dependency injection with PicoContainer -->
+        <!-- Dependency injection (optional) -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
@@ -46,37 +44,29 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- ✅ JUnit Jupiter -->
+        <!-- JUnit 4 -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-        
-        <!-- JUnit Platform Suite API (for @Suite, @SelectClasspathResource) -->
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-suite-api</artifactId>
-            <version>1.10.2</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- ✅ Gson for JSON serialization/deserialization -->
+        <!-- Gson for JSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
         </dependency>
 
-        <!-- ✅ Allure reporting -->
+        <!-- Allure reporting -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber7-jvm</artifactId>
             <version>${allure.version}</version>
         </dependency>
 
-        <!-- ✅ Logging (SLF4J + Logback) -->
+        <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -91,7 +81,7 @@
 
     <build>
         <plugins>
-            <!-- ✅ Compiler -->
+            <!-- Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -102,17 +92,14 @@
                 </configuration>
             </plugin>
 
-            <!-- ✅ Surefire for JUnit 5 -->
+            <!-- Surefire for JUnit 4 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
-                <configuration>
-                    <useModulePath>false</useModulePath>
-                </configuration>
             </plugin>
 
-            <!-- ✅ Allure Maven plugin -->
+            <!-- Allure Maven plugin -->
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>

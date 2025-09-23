@@ -6,7 +6,7 @@ import io.cucumber.java.en.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 public class CharacterSteps {
 
@@ -17,6 +17,7 @@ public class CharacterSteps {
     @Given("I request character with id {int}")
     public void i_request_character_with_id(int id) throws Exception {
         logger.info("Requesting character with id {}", id);
+        System.out.println("Requesting character with id " + id);
         character = apiClient.getCharacterById(id);
     }
 
