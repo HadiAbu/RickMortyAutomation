@@ -29,12 +29,12 @@ public class CheckInvalidSteps {
         logger.info("Sending GET request to: {}", urlString);
 
         apiClient.getByUrl(urlString);
-        assertEquals(200, apiClient.getResponseCode());
+        // assertEquals(200, apiClient.getResponseCode());
     }
     @Then("response status should be {int}")
     public void response_status_should_be(int statusCode){
-        assertEquals(apiClient.getResponseCode(), statusCode);
         logger.info("Response status code is: {}", statusCode);
+        assertEquals(apiClient.getResponseCode(), statusCode);
     }
     
     @Then("results should contain characters with {string} in name")
@@ -58,6 +58,7 @@ public class CheckInvalidSteps {
 
     @Then("response should contain error message")
     public void response_should_contain_error_message() {
-        // Write code here that turns the phrase above into concrete actions
+        assertTrue(apiClient.getErrorMessage() != null );
+        logger.info("Error message: {}", apiClient.getErrorMessage());
     }
 }

@@ -128,6 +128,7 @@ public class ApiClient {
                 // List of characters
                 return gson.fromJson(responseBody, CharactersResponseDTO.class);
             } else if (element.getAsJsonObject().has("error")) {
+                errorMessage = element.getAsJsonObject().get("error").getAsString();
                 // Error response
                 return gson.fromJson(responseBody, ErrorResponseDTO.class);
             } else if (element.getAsJsonObject().has("name")) {
