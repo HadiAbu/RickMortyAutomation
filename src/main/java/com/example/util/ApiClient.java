@@ -137,7 +137,6 @@ public class ApiClient {
             }
         }
 
-        // fallback
         return null;
     }
 
