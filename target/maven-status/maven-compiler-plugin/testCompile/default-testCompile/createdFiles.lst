@@ -1,2 +1,3 @@
+com\example\steps\AboutSteps.class
 com\example\runners\TestRunner.class
 com\example\steps\CharacterSteps.class

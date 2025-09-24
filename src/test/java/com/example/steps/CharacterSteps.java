@@ -17,14 +17,24 @@ public class CharacterSteps {
     @Given("I request character with id {int}")
     public void i_request_character_with_id(int id) throws Exception {
         logger.info("Requesting character with id {}", id);
-        System.out.println("Requesting character with id " + id);
-        character = apiClient.getCharacterById(id);
-        System.out.println("and the character is: "+  id);
+        character = (CharacterDTO) apiClient.getCharacterById(id);
     }
 
     @Then("the response should contain the name {string}")
     public void the_response_should_contain_the_name(String expectedName) {
+        assertEquals(character.getName(),expectedName);
         logger.info("Validating response name: {}", character.getName());
-        assertEquals(expectedName, character.getName());
+    }
+
+    @And("the species should be {string}")
+    public void the_species_should_be(String expectedRes) {
+        logger.info("the species should be: {}" + expectedRes);
+        assertEquals(character.getSpecies(), expectedRes);
+    }
+
+    @And("the status should be {string}")
+    public void the_status_should_be(String expectedStatus) {
+        logger.info("The valid status should be: {}", expectedStatus);
+        assertEquals(character.getStatus(), expectedStatus);
     }
 }
