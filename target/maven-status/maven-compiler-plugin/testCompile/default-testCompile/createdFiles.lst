@@ -1,3 +1,5 @@
 com\example\steps\AboutSteps.class
 com\example\runners\TestRunner.class
+com\example\hooks\Hooks.class
 com\example\steps\CharacterSteps.class
+com\example\steps\CheckInvalidSteps.class

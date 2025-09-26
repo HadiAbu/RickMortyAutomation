@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.model.CharacterDTO;
@@ -12,7 +13,6 @@ import com.example.model.CharactersResponseDTO;
 import com.example.model.ErrorResponseDTO;
 import com.example.util.ApiClient;
 
-import org.slf4j.Logger;
 
 // import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
