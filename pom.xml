@@ -33,7 +33,7 @@
             <version>7.14.0</version>
             <scope>test</scope>
         </dependency>
-                <dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
@@ -45,7 +45,6 @@
             <version>7.14.0</version>
             <scope>test</scope>
         </dependency>
-
         <!-- Dependency injection (optional) -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -53,7 +52,6 @@
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
-
         <!-- JUnit 4 -->
         <dependency>
             <groupId>junit</groupId>
@@ -61,47 +59,41 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
         <!-- Gson for JSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
         </dependency>
-
         <!-- Allure reporting -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber7-jvm</artifactId>
             <version>${allure.version}</version>
         </dependency>
-
         <!-- Logging -->
-                <!-- Log4j2 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>${log4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
         </dependency>
           <!-- Selenium -->
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.25.0</version>
-    </dependency>
-
-    <!-- WebDriverManager (auto downloads browser drivers) -->
-    <dependency>
-        <groupId>io.github.bonigarcia</groupId>
-        <artifactId>webdrivermanager</artifactId>
-        <version>5.9.2</version>
-    </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.25.0</version>
+        </dependency>
+        <!-- WebDriverManager (auto downloads browser drivers) -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.9.2</version>
+        </dependency>
     </dependencies>
 
     <build>

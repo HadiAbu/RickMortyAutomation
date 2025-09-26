@@ -45,7 +45,7 @@ public class ApiClient {
     public CharacterDTO getCharacaterByUrl(String urlString) throws IOException{
         return (CharacterDTO) getByUrl(urlString);
     }
- /**
+    /**
      * Sends GET request and always returns a List<CharacterDTO>
      * Handles single character, list of characters, or error
      */
