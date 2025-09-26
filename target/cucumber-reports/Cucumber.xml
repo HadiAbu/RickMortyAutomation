@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="10.762" tests="5" skipped="0" failures="0" errors="0">
-<testcase classname="Rick and Morty API Website Navigation" name="Explore the About page" time="4.47">
+<testsuite name="Cucumber" time="9.622" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="Rick and Morty API Website Navigation" name="Explore the About page" time="3.927">
 <system-out><![CDATA[
 Given I am on "https://rickandmortyapi.com/"................................passed
 When I click on the "About" link............................................passed
@@ -9,13 +9,13 @@ And I should see information about the technical stuff......................pass
 And I should see "Axel Fuhrmann" mentioned..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Rick and Morty API testing" name="Get character by ID" time="1.653">
+<testcase classname="Rick and Morty API testing" name="Get character by ID" time="1.489">
 <system-out><![CDATA[
 Given I request character with id 1.........................................passed
 Then the response should contain the name "Rick Sanchez"....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Rick and Morty API testing" name="Get character by ID" time="1.023">
+<testcase classname="Rick and Morty API testing" name="Get character by ID" time="0.998">
 <system-out><![CDATA[
 Given I request character with id 1.........................................passed
 Then the response should contain the name "Rick Sanchez"....................passed
@@ -23,14 +23,14 @@ And the status should be "Alive"............................................pass
 And the species should be "Human"...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Character API Testing" name="Search characters by name" time="1.27">
+<testcase classname="Character API Testing" name="Search characters by name" time="1.179">
 <system-out><![CDATA[
 When I send GET request to "https://rickandmortyapi.com/api/character/?name=rick".passed
 Then response status should be 200..........................................passed
 And results should contain characters with "rick" in name...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Character API Testing" name="Handle invalid character ID" time="2">
+<testcase classname="Character API Testing" name="Handle invalid character ID" time="1.689">
 <system-out><![CDATA[
 When I send GET request to "https://rickandmortyapi.com/api/character/999999".passed
 Then response status should be 404..........................................passed

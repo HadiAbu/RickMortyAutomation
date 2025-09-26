@@ -5,4 +5,3 @@ com\example\hooks\Hooks.class
 com\example\steps\CharacterSteps.class
 com\example\pages\AboutPage.class
 com\example\steps\CheckInvalidSteps.class
-com\pages\AboutPage.class
