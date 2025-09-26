@@ -11,16 +11,6 @@ public class DriverManager {
 
     private WebDriver driver;
 
-    public WebDriver getDriver() {
-        if (this.driver == null) {
-            WebDriverManager.chromedriver().setup();
-            this.driver = new ChromeDriver();
-            this.driver.manage().window().maximize();
-            log.info("Launching new Chrome browser");
-        }
-        return driver;
-    }
-
     public void quitDriver() {
         if (this.driver != null) {
             this.driver.quit();
@@ -29,11 +19,13 @@ public class DriverManager {
         }
     }
 
-    public WebDriver getDriver(String browser) {
+    public WebDriver getDriver() {
         if (this.driver == null) {
             WebDriverManager.chromedriver().setup();
             this.driver = new ChromeDriver();
+            this.driver.manage().window().maximize();
+            log.info("Launching new Chrome browser");
         }
-        return this.driver;
+        return driver;
     }
 }

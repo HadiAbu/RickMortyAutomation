@@ -1,5 +1,8 @@
 com\example\steps\AboutSteps.class
+com\example\pages\BasePage.class
 com\example\runners\TestRunner.class
 com\example\hooks\Hooks.class
 com\example\steps\CharacterSteps.class
+com\example\pages\AboutPage.class
 com\example\steps\CheckInvalidSteps.class
+com\pages\AboutPage.class
