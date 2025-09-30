@@ -22,10 +22,10 @@ public class AboutSteps {
     }
 
     @Given("I am on {string}")
-    public void I_am_on(String s) {
-        log.info("Opening {} page", s);
+    public void I_am_on(String url) {
+        log.info("Opening {} page", url);
         
-        aboutPage.open(s);
+        aboutPage.open(url);
         Assert.assertEquals("The Rick and Morty API", aboutPage.getTitle());
     }
     @Then("I should see {string} mentioned")
@@ -35,11 +35,11 @@ public class AboutSteps {
         
     }
     @When("I click on the {string} link")
-    public void I_click_on_the_link(String s) {
-        if (s.equalsIgnoreCase("About")) {
+    public void I_click_on_the_link(String url) {
+        if (url.equalsIgnoreCase("About")) {
             aboutPage.clickAboutLink();
         }
-        log.info("clicking on the link '{}'", s);
+        log.info("clicking on the link '{}'", url);
     }
     @Then("I should be redirected to the about page")
     public void I_should_be_redirected_to_the_about_page() {
