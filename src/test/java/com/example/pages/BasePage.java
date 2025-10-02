@@ -11,6 +11,7 @@ public abstract class BasePage {
         // only initialize if driver is set
         if (driver != null) {
             PageFactory.initElements(driver, this);
+            
         }
     }
 

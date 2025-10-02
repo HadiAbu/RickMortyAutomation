@@ -120,7 +120,7 @@ public class ApiClient {
 
         String responseBody = json.toString();
 
-        // Use Gson + simple JSON parsing to determine type
+        // Use Gson + simple JSON parsing to determine type 
         JsonElement element = JsonParser.parseString(responseBody);
 
         if (element.isJsonObject()) {
